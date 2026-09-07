@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot de RH do Telegram — Caso de Estudo | Arthur Faturini</title>
+    <!-- Importação da fonte JetBrains Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        customBg: '#121212',
+                        customMain: '#EDEDED',
+                        customSec: '#888888',
+                        customBorder: '#262626',
+                        customTitle: '#888888',
+                    },
+                    fontFamily: {
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            font-family: 'JetBrains Mono', monospace !important;
+        }
+
+        body {
+            background-color: #121212;
+            color: #EDEDED;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body class="bg-customBg text-customMain leading-relaxed">
+
+    <!-- Header Fixo -->
+    <nav
+        class="fixed top-0 left-0 w-full bg-[#121212]/90 backdrop-blur-md border-b border-customBorder flex justify-between items-center py-4 px-8 z-50 text-sm">
+        <div class="text-customSec truncate max-w-[60%] sm:max-w-none">
+            ~/arthur-faturini / projetos / <span class="text-customMain">bot-rh-telegram</span>
+        </div>
+        <div>
+            <a href="../index.html#projetos"
+                class="text-customSec hover:text-customMain transition-colors flex items-center gap-1">
+                ← Voltar
+            </a>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-16 max-w-4xl mx-auto px-6">
+
+        <!-- Hero do Projeto -->
+        <header class="mb-20">
+            <h1 class="text-2xl md:text-3xl font-bold text-customMain mb-4">Bot de RH do Telegram</h1>
+            <p class="text-customSec text-base md:text-lg mb-8 text-justify">
+                Sistema de automação e ecossistema integrado para otimização de fluxos de trabalho internos, triagem de
+                dados e geração automatizada de documentos para a diretoria de Desenvolvimento Humano.
+            </p>
+
+            <!-- Caixa de Metadados -->
+            <div class="border border-customBorder bg-customBg p-6 grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs">
+                <div>
+                    <span class="text-customSec block mb-1">ANO</span>
+                    <span class="text-customMain font-semibold">2026</span>
+                </div>
+                <div>
+                    <span class="text-customSec block mb-1">TIPO</span>
+                    <span class="text-customMain font-semibold">Projeto Interno / Empresa Júnior(Ecomp)</span>
+                </div>
+                <div>
+                    <span class="text-customSec block mb-1">TECNOLOGIAS</span>
+                    <span class="text-customMain font-semibold">N8N, Docker, APIs</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Seções de Conteúdo -->
+        <div class="space-y-20">
+
+            <!-- Seção 01 -->
+            <section>
+                <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-8 pt-8">
+                    <div class="max-w-[1200px] mx-auto px-6">
+                        <h2 class="text-lg font-semibold text-customTitle tracking-wide">// 01. VISÃO GERAL</h2>
+                    </div>
+                    <div class="w-full h-[1px] bg-customBorder mt-3"></div>
+                </div>
+                <p class="text-customSec text-sm md:text-base text-justify leading-relaxed">
+                    O projeto nasceu da necessidade de liderar, planejar e arquitetar uma solução capaz de otimizar os
+                    fluxos de trabalho manuais da diretoria de Desenvolvimento Humano (DH) na Ecomp (Empresa Júnior de
+                    Computação da UFPR). O objetivo central foi substituir processos operacionais repetitivos por um
+                    ecossistema integrado de automação, centralizando a comunicação dos membros via Telegram e
+                    conectando ferramentas de gestão de dados e documentos.
+                </p>
+            </section>
+
+            <!-- Seção 02 -->
+            <section>
+                <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-8 pt-8">
+                    <div class="max-w-[1200px] mx-auto px-6">
+                        <h2 class="text-lg font-semibold text-customTitle tracking-wide">// 02. O DESAFIO</h2>
+                    </div>
+                    <div class="w-full h-[1px] bg-customBorder mt-3"></div>
+                </div>
+                <p class="text-customSec text-sm md:text-base text-justify leading-relaxed mb-6">
+                    Antes da implementação do bot, os processos internos do setor sofriam com atritos de tempo e risco
+                    de falha humana no manuseio de informações sensíveis:
+                </p>
+                <ul class="list-disc list-inside text-customSec text-justify text-sm md:text-base space-y-2">
+                    <li>Ineficiência Operacional: A criação e emissão manual de documentos demandava até mais 15 minutos
+                        por solicitação.</li>
+                    <li>Fragmentação de Dados: Informações descentralizadas entre mensagens de texto, planilhas e pastas
+                        do setor.</li>
+                    <li>Risco de Erro Humano: Falhas eventuais de digitação e padronização na geração de relatórios e
+                        documentos de membros.</li>
+                </ul>
+            </section>
+
+            <!-- Seção 03 -->
+            <section>
+                <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-8 pt-8">
+                    <div class="max-w-[1200px] mx-auto px-6">
+                        <h2 class="text-lg font-semibold text-customTitle tracking-wide">// 03. ARQUITETURA TÉCNICA</h2>
+                    </div>
+                    <div class="w-full h-[1px] bg-customBorder mt-3"></div>
+                </div>
+                <p class="text-customSec text-sm md:text-base text-justify leading-relaxed mb-6">
+                    A solução foi desenhada como um ecossistema totalmente integrado e orquestrado por fluxos de
+                    automação em N8N hospedados em ambiente containerizado (Docker), abaixo, segue uma abstração da
+                    arquitetura dos fluxos:
+                </p>
+                <!-- ========================================== -->
+                <!-- DIAGRAMA DE ARQUITETURA DE WORKFLOWS (N8N) -->
+                <!-- ========================================== -->
+                <div class="my-6 bg-[#121212] border border-[#262626] rounded-md p-5 font-mono text-xs text-[#EDEDED]">
+
+                    <!-- Header do Card -->
+                    <div
+                        class="text-[#888888] text-xs pb-3 mb-5 border-b border-[#262626] flex items-center justify-between">
+                        <span>~/architecture/n8n-pipeline-flow</span>
+                        <span class="text-[#666666]">Router & Sub-Workflows</span>
+                    </div>
+
+                    <!-- Fluxo Principal Vertical -->
+                    <div class="flex flex-col items-center space-y-3">
+
+                        <!-- 0. Telegram Interface -->
+                        <div
+                            class="w-full max-w-md bg-[#181818] border border-[#333333] p-3 rounded text-center font-bold">
+                            [ Telegram Bot Interface ]
+                        </div>
+
+                        <!-- Seta Conectora -->
+                        <div class="text-[#888888] flex flex-col items-center">
+                            <span class="text-[10px] text-[#666666] mb-0.5">(Webhook / API)</span>
+                            <span>↓</span>
+                        </div>
+
+                        <!-- 1. Autenticação -->
+                        <div class="w-full max-w-md bg-[#181818] border border-[#333333] p-3 rounded">
+                            <div class="font-bold text-[#EDEDED] mb-1">1. Workflow de Autenticação & Validação (N8N)
+                            </div>
+                            <div class="text-[#888888] text-[11px]">└─ Verifica ID do Usuário & Permissões no Banco de
+                                Dados</div>
+                        </div>
+
+                        <!-- Ramificação Autenticação -->
+                        <div class="w-full max-w-md flex gap-4 items-center px-4 text-[11px]">
+                            <div class="text-rose-400 border border-rose-500/30 bg-rose-500/10 px-2 py-1 rounded">
+                                ✕ Não Autorizado ➔ Acesso Negado
+                            </div>
+                            <div
+                                class="text-emerald-400 border border-emerald-500/30 bg-emerald-500/10 px-2 py-1 rounded">
+                                ✓ Autorizado ➔ Prosseguir
+                            </div>
+                        </div>
+
+                        <!-- Seta Conectora -->
+                        <div class="text-[#888888]">↓</div>
+
+                        <!-- 2. Roteador Principal -->
+                        <div class="w-full max-w-md bg-[#181818] border border-[#333333] p-3 rounded">
+                            <div class="font-bold text-[#EDEDED] mb-1">2. Workflow Roteador Principal (Core Router)
+                            </div>
+                            <div class="text-[#888888] text-[11px]">└─ Analisa o Comando Disparado (ex: /termo, /dados)
+                            </div>
+                        </div>
+
+                        <!-- Seta Conectora -->
+                        <div class="text-[#888888] flex flex-col items-center pt-2">
+                            <span class="text-[10px] text-[#666666] mb-0.5">(Redirecionamento por Comando)</span>
+                            <span>↓</span>
+                        </div>
+
+                        <!-- 3. Sub-Workflows Espelhados (Grid) -->
+                        <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-3 pt-2">
+
+                            <!-- Sub 1 -->
+                            <div class="bg-[#181818] border border-[#262626] p-3 rounded flex flex-col justify-between">
+                                <div>
+                                    <div class="text-xs font-bold text-[#EDEDED] mb-1">Sub-Workflows de Consultas</div>
+                                    <div class="text-[#888888] text-[11px]">Consulta Cadastral</div>
+                                </div>
+                                <div class="mt-3 pt-2 border-t border-[#262626] text-[10px] text-[#666666]">
+                                    ➔ Notion API
+                                </div>
+                            </div>
+
+                            <!-- Sub 2 -->
+                            <div class="bg-[#181818] border border-[#262626] p-3 rounded flex flex-col justify-between">
+                                <div>
+                                    <div class="text-xs font-bold text-[#EDEDED] mb-1">Sub-Workflows de Geração de
+                                        Documentos</div>
+                                    <div class="text-[#888888] text-[11px]">Gerador de Documentos</div>
+                                </div>
+                                <div class="mt-3 pt-2 border-t border-[#262626] text-[10px] text-[#666666]">
+                                    ➔ Google Docs / Drive API
+                                </div>
+                            </div>
+
+                            <!-- Sub 3 -->
+                            <div class="bg-[#181818] border border-[#262626] p-3 rounded flex flex-col justify-between">
+                                <div>
+                                    <div class="text-xs font-bold text-[#EDEDED] mb-1">Sub-Workflows de Avisos</div>
+                                    <div class="text-[#888888] text-[11px]">Métricas & Resposta</div>
+                                </div>
+                                <div class="mt-3 pt-2 border-t border-[#262626] text-[10px] text-[#666666]">
+                                    ➔ Telegram API (Payload)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="list-disc list-inside text-customSec text-sm text-justify md:text-base space-y-2">
+                    <li>Interface de Entrada: Bot no Telegram atuando como ponto único de contato para os assessores de
+                        Desenvolvimento Humano.</li>
+                    <li>Orquestração de Automações: Fluxos no N8N para consumo de webhooks, tratamento de payload e
+                        roteamento condicional de regras de negócio.</li>
+                    <li>Modelagem e Persistência de Dados: Integração com a API do Notion para consulta e atualização em
+                        tempo real de cadastros e status operacionais.</li>
+                    <li>Geração e Armazenamento de Documentos: Integração automatizada com Google Drive/Docs para
+                        preenchimento dinâmico de templates e salvamento estruturado.</li>
+                </ul>
+                <div class="mt-8 space-y-3">
+                    <h3 class="text-[#888888] font-mono text-x uppercase tracking-wider">// 03.1 DEMONSTRAÇÃO DO FLUXO
+                        INICIAL</h3>
+
+                    <!-- Container do Vídeo / GIF -->
+                    <div class="max-w-xl mx-auto border border-[#262626] rounded-md bg-[#121212] overflow-hidden p-2">
+                        <video autoplay loop muted playsinline class="w-full rounded border border-[#262626]">
+                            <source src="../assets/dhbot_mockup_conversation.mp4" type="video/mp4" />
+                            Seu navegador não suporta a exibição de vídeos.
+                        </video>
+
+                        <p class="text-xs text-[#888888] font-mono mt-2 text-center">
+                            [fig 3.1] Demonstração do fluxo interativo no Telegram integrado ao N8N para gestão
+                            automatizada de dados, processos e documentos de Desenvolvimento Humano.
+                        </p>
+                    </div>
+                    <!-- Container do Vídeo / GIF -->
+                    <h3 class="text-[#888888] font-mono text-x uppercase tracking-wider">// 03.2 DEMONSTRAÇÃO DO FLUXO
+                        DE DESLIGAMENTO
+                        EM TEMPO REAL</h3>
+                    <div class="max-w-xl mx-auto border border-[#262626] rounded-md bg-[#121212] overflow-hidden p-2">
+                        <video autoplay loop muted playsinline class="w-full rounded border border-[#262626]">
+                            <source src="../assets/dhbot_mockup_desligamento.mp4" type="video/mp4" />
+                            Seu navegador não suporta a exibição de vídeos.
+                        </video>
+
+                        <p class="text-xs text-[#888888] font-mono mt-2 text-center">
+                            [fig 3.2] Fluxo automatizado de geração de documentos oficiais (PDF) em tempo
+                            real, integrando Telegram API, N8N, Notion e Google Drive.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção 04 -->
+            <section>
+                <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-8 pt-8">
+                    <div class="max-w-[1200px] mx-auto px-6">
+                        <h2 class="text-lg font-semibold text-customTitle tracking-wide">// 04. RESULTADOS & IMPACTO
+                        </h2>
+                    </div>
+                    <div class="w-full h-[1px] bg-customBorder mt-3"></div>
+                </div>
+                <p class="text-customSec text-sm md:text-base text-justify leading-relaxed">
+                    A implementação do ecossistema restaurou a eficiência operacional da diretoria, gerando um ganho de
+                    80% na produtividade ao reduzir o tempo de emissão de documentos de 15 minutos para menos de 3
+                    minutos. Além de otimizar a rotina da equipe para que pudessem focar em ações estratégicas de gestão
+                    de pessoas, a automação eliminou gargalos operacionais e garantiu uma taxa de erro zero na
+                    padronização dos dados e arquivos gerados.
+                </p>
+            </section>
+
+        </div>
+
+        <!-- Seção de Ações (Antes do Footer) -->
+        <div
+            class="mt-24 pt-8 border-t border-customBorder flex flex-col sm:flex-row justify-between items-center gap-4">
+            <span class="text-[#6E6E6E] cursor-not-allowed select-none text-sm">
+                [Repositório Privado]
+            </span>
+
+            <!-- Próximo Projeto -->
+            <!-- <a href="soundpad-case.html"
+                class="text-customSec hover:text-customMain text-sm transition-colors flex items-center gap-1 w-full sm:w-auto justify-end">
+                Próximo Projeto →
+            </a> -->
+        </div>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="text-center py-16 px-6 text-customSec text-xs border-t border-customBorder mt-16">
+        Desenvolvido por Arthur Faturini — 2026
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arthur Faturini — Portfólio</title>
+    <!-- Importação da fonte JetBrains Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        customBg: '#121212',
+                        customMain: '#EDEDED',
+                        customSec: '#888888',
+                        customBorder: '#262626',
+                        customTitle: '#888888', // Novo tom de cinza claro para os títulos
+                    },
+                    fontFamily: {
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            font-family: 'JetBrains Mono', monospace !important;
+        }
+
+        body {
+            background-color: #121212;
+            color: #EDEDED;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body class="bg-customBg text-customMain leading-relaxed">
+
+    <!-- Navegação -->
+    <nav
+        class="fixed top-0 left-0 w-full bg-[#121212]/90 backdrop-blur-md border-b border-customBorder flex justify-between items-center py-4 px-8 z-50 text-sm">
+        <div class="text-customSec">~/arthur-faturini</div>
+        <div class="flex gap-6">
+            <a href="#sobre" class="text-customSec hover:text-customMain transition-colors">Sobre</a>
+            <a href="#projetos" class="text-customSec hover:text-customMain transition-colors">Projetos</a>
+            <a href="#ferramentas" class="text-customSec hover:text-customMain transition-colors">Ferramentas</a>
+            <a href="#trajetoria" class="text-customSec hover:text-customMain transition-colors">Trajetória</a>
+            <a href="#contato" class="text-customSec hover:text-customMain transition-colors">Contato</a>
+        </div>
+    </nav>
+
+    <!-- Seção Sobre (Hero) com Matrix de Ponta a Ponta -->
+    <section id="sobre" class="relative min-h-screen flex items-center justify-center pt-20 px-4 w-full">
+        <canvas id="matrix-canvas" class="absolute inset-0 w-full h-full z-0 pointer-events-none"></canvas>
+        <div
+            class="relative z-10 max-w-4xl w-full mx-auto flex flex-col md:flex-row items-center gap-8 p-8 bg-[#121212]/75 backdrop-blur-sm border border-customBorder">
+            <!-- <img src="foto-perfil-line-art.jpg" alt="Arthur Faturini"
+                class="w-40 h-40 rounded-full invert object-cover grayscale border border-customBorder flex-shrink-0"> -->
+            <div>
+                <h1 class="text-xl mb-4 text-customMain">Arthur Faturini</h1>
+                <p class="text-customSec text-sm text-justify md:text-base leading-relaxed">Olá, sou o Arthur Faturini!
+                    Desenvolvedor apaixonado por transformar ideias complexas e mirabolantes em projetos reais e úteis.
+                    Atualmente, curso Análise e Desenvolvimento de Sistemas na UFPR. Sou Assessor de Desenvolvimento
+                    Humano na Ecomp (Empresa Júnior de Computação da UFPR). Estou sempre construindo e pensando em algo
+                    novo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projetos" class="py-24 max-w-[1200px] mx-auto px-6">
+        <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-12 pt-8">
+            <div class="max-w-[1200px] mx-auto px-6">
+                <h2 class="text-lg font-semibold text-customTitle tracking-wide">// PROJETOS</h2>
+            </div>
+            <div class="w-full h-[1px] bg-customBorder mt-3"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Projeto 1 -->
+            <div
+                class="border border-customBorder p-8 bg-customBg flex flex-col justify-between hover:border-customSec transition-colors">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-lg text-customMain">Sistema PDV</h3>
+                        <span class="text-xs text-customSec border border-customBorder px-2 py-1">Python / HTML / CSS /
+                            JS</span>
+                    </div>
+                    <p class="text-customSec text-sm text-justify mb-6">Aplicação de ponto de venda estruturada para
+                        controle de
+                        caixa, estoque e emissão rápida de pedidos com interface web integrada.</p>
+                </div>
+                <div class="flex justify-between items-center text-sm">
+                    <a href="https://github.com/ArthurFaturini/Sistema-PDV" target="_blank"
+                        class="text-customMain border-b border-dotted border-customSec hover:text-customSec transition-colors">[GitHub]</a>
+                    <a href="projetos/sistema-pdv.html"
+                        class="text-customMain border-b border-dotted border-customSec hover:text-customSec transition-colors">[+
+                        ler caso de estudo]</a>
+                </div>
+            </div>
+
+            <!-- Projeto 2 -->
+            <div
+                class="border border-customBorder p-8 bg-customBg flex flex-col justify-between hover:border-customSec transition-colors">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-lg text-customMain">Bot de RH do Telegram</h3>
+                        <span class="text-xs text-customSec border border-customBorder px-2 py-1">N8N / Docker</span>
+                    </div>
+                    <p class="text-customSec text-sm text-justify mb-6">Robô de automação voltado para o setor de
+                        recursos humanos,
+                        otimizando triagem de mensagens, avisos internos e suporte automatizado na plataforma.</p>
+                </div>
+                <div class="flex justify-between items-center text-sm">
+                    <span class="text-[#6E6E6E] cursor-not-allowed select-none text-sm">
+                        [Repositório Privado]
+                    </span>
+                    <a href="projetos/bot-rh-telegram.html"
+                        class="text-customMain border-b border-dotted border-customSec hover:text-customSec transition-colors">[+
+                        ler caso de estudo]</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Ferramentas -->
+    <section id="ferramentas" class="py-24 max-w-[1200px] mx-auto px-6">
+        <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-12 pt-8">
+            <div class="max-w-[1200px] mx-auto px-6">
+                <h2 class="text-lg font-semibold text-customTitle tracking-wide">// FERRAMENTAS</h2>
+            </div>
+            <div class="w-full h-[1px] bg-customBorder mt-3"></div>
+        </div>
+
+        <p class="text-customSec text-sm md:text-base mb-8">Tecnologias, linguagens e ambientes utilizados no
+            desenvolvimento de software:</p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
+            <div
+                class="border border-customBorder p-5 text-center text-sm text-customMain bg-customBg transition-colors duration-200 hover:text-[#777BB4] hover:border-[#777BB4] cursor-default">
+                PHP</div>
+            <div
+                class="border border-customBorder p-5 text-center text-sm text-customMain bg-customBg transition-colors duration-200 hover:text-[#FF2D20] hover:border-[#FF2D20] cursor-default">
+                Laravel</div>
+            <div
+                class="border border-customBorder p-5 text-center text-sm text-customMain bg-customBg transition-colors duration-200 hover:text-[#3776AB] hover:border-[#3776AB] cursor-default">
+                Python</div>
+            <div
+                class="border border-customBorder p-5 text-center text-sm text-customMain bg-customBg transition-colors duration-200 hover:text-[#E34F26] hover:border-[#E34F26] cursor-default">
+                HTML</div>
+            <div
+                class="border border-customBorder p-5 text-center text-sm text-customMain bg-customBg transition-colors duration-200 hover:text-[#1572B6] hover:border-[#1572B6] cursor-default">
+                CSS(Tailwind)</div>
+            <div
+                class="border border-customBorder p-5 text-center text-sm text-customMain bg-customBg transition-colors duration-200 hover:text-[#F7DF1E] hover:border-[#F7DF1E] cursor-default">
+                JS</div>
+            <div
+                class="border border-customBorder p-5 text-center text-sm text-customMain bg-customBg transition-colors duration-200 hover:text-[#2496ED] hover:border-[#2496ED] cursor-default">
+                Docker</div>
+            <div
+                class="border border-customBorder p-5 text-center text-sm text-customMain bg-customBg transition-colors duration-200 hover:text-[#EA4B71] hover:border-[#EA4B71] cursor-default">
+                N8N</div>
+            <div
+                class="border border-customBorder p-5 text-center text-sm text-customMain bg-customBg transition-colors duration-200 hover:text-[#F05032] hover:border-[#F05032] cursor-default">
+                Git/Github</div>
+            <div
+                class="border border-customBorder p-5 text-center text-sm text-customMain bg-customBg transition-colors duration-200 hover:text-[#FF6C37] hover:border-[#FF6C37] cursor-default">
+                Postman</div>
+            <div
+                class="border border-customBorder p-5 text-center text-sm text-customMain bg-customBg transition-colors duration-200 hover:text-[#00758F] hover:border-[#00758F] cursor-default">
+                MySQL</div>
+        </div>
+    </section>
+
+    <!-- Seção Trajetória -->
+    <section id="trajetoria" class="py-24 max-w-[1200px] mx-auto px-6">
+        <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-12 pt-8">
+            <div class="max-w-[1200px] mx-auto px-6">
+                <h2 class="text-lg font-semibold text-customTitle tracking-wide">// TRAJETÓRIA</h2>
+            </div>
+            <div class="w-full h-[1px] bg-customBorder mt-3"></div>
+        </div>
+
+        <div class="border-l border-[#262626] pl-6 space-y-10 ml-2">
+            <!-- Item 1 -->
+            <div class="relative">
+                <div class="text-xs text-customSec mb-1">2026 — Presente</div>
+                <h3 class="text-base font-bold text-customMain">Assessor de Desenvolvimento Humano & Desenvolvedor</h3>
+                <div class="text-sm text-customSec mb-2">Ecomp (Empresa Júnior de Computação — UFPR)</div>
+                <p class="text-sm text-customSec text-justify">Atuação no desenvolvimento de automações e ferramentas
+                    internas (como um bot para o Telegram) voltadas à otimização da geração de documentos, da triagem de
+                    mensagens e avisos. Suporte direto à gestão de processos e desenvolvimento humano na Empresa Júnior.
+                </p>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="relative">
+                <div class="text-xs text-customSec mb-1">2025 — Presente</div>
+                <h3 class="text-base font-bold text-customMain">Graduação em Análise e Desenvolvimento de Sistemas</h3>
+                <div class="text-sm text-customSec mb-2">Universidade Federal do Paraná (UFPR)</div>
+                <p class="text-sm text-customSec text-justify">Mudança para Curitiba e ingresso no ensino superior
+                    público. Foco no aprendizado prático e teórico de engenharia de software, arquitetura de sistemas,
+                    orientação a objetos, bancos de dados e metodologias ágeis.</p>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="relative">
+                <div class="text-xs text-customSec mb-1">2024 — 2025</div>
+                <h3 class="text-base font-bold text-customMain">Solução Autônoma / Setor de Serviços</h3>
+                <div class="text-sm text-customSec mb-2">Estudos Autônomos e Utilitários Desktop</div>
+                <p class="text-sm text-customSec text-justify">A partir da vivência como garçom, identificação de
+                    gargalos operacionais no atendimento de uma pizzaria. Concepção e desenvolvimento do zero de um
+                    sistema PDV (Python/Web) para eliminação de erros manuais em comandas, gestão de produtos e
+                    automação de impressão de pedidos.</p>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="relative">
+                <div class="text-xs text-customSec mb-1">2022 — 2024</div>
+                <h3 class="text-base font-bold text-customMain">Descoberta da Tecnologia & Desenvolvimento Pessoal</h3>
+                <div class="text-sm text-customSec mb-2">Estudos Autônomos & Ensino Médio</div>
+                <p class="text-sm text-customSec text-justify">Período de virada focado em inteligência emocional,
+                    neurociência e lógica. Descoberta do potencial da tecnologia como ferramenta para criar soluções
+                    reais, resultando nos primeiros estudos de programação e desenvolvimento de aplicações utilitárias
+                    desktop (Python).</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="py-24 max-w-[1200px] mx-auto px-6">
+        <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-12 pt-8">
+            <div class="max-w-[1200px] mx-auto px-6">
+                <h2 class="text-lg font-semibold text-customTitle tracking-wide">// CONTATO</h2>
+            </div>
+            <div class="w-full h-[1px] bg-customBorder mt-3"></div>
+        </div>
+
+        <div class="flex flex-col">
+            <div class="flex justify-between py-5 border-t border-b border-customBorder text-sm md:text-base">
+                <span class="text-customSec">GitHub</span>
+                <a href="https://github.com/ArthurFaturini" target="_blank"
+                    class="text-customMain hover:text-customSec underline transition-colors">github.com/ArthurFaturini</a>
+            </div>
+            <div class="flex justify-between py-5 border-b border-customBorder text-sm md:text-base">
+                <span class="text-customSec">LinkedIn</span>
+                <a href="https://linkedin.com/in/arthur-faturini" target="_blank"
+                    class="text-customMain hover:text-customSec underline transition-colors">linkedin.com/in/arthur-faturini</a>
+            </div>
+            <div class="flex justify-between py-5 border-b border-customBorder text-sm md:text-base">
+                <span class="text-customSec">Email</span>
+                <a href="mailto:arthurfaturinirpa@gmail.com"
+                    class="text-customMain hover:text-customSec underline transition-colors">arthurfaturinirpa@gmail.com</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="text-center py-16 px-6 text-customSec text-xs border-t border-customBorder mt-16">
+        Desenvolvido por Arthur Faturini — 2026
+    </footer>
+
+    <!-- Script do Efeito Matrix -->
+    <script>
+        const canvas = document.getElementById('matrix-canvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = document.getElementById('sobre').offsetHeight;
+        }
+
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const characters = '01ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz#@$%&*<>/-_';
+        const fontSize = 14;
+        let columns = Math.floor(canvas.width / fontSize);
+        let drops = [];
+
+        for (let i = 0; i < columns; i++) {
+            drops[i] = 1;
+        }
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(18, 18, 18, 0.12)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#333333';
+            ctx.font = fontSize + 'px "JetBrains Mono", monospace';
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = characters.charAt(Math.floor(Math.random() * characters.length));
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+
+        window.addEventListener('resize', () => {
+            resizeCanvas();
+            columns = Math.floor(canvas.width / fontSize);
+            drops = [];
+            for (let i = 0; i < columns; i++) {
+                drops[i] = 1;
+            }
+        });
+
+        setInterval(drawMatrix, 50);
+    </script>
+</body>
+
+</html>

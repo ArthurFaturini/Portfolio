@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema PDV — Caso de Estudo | Arthur Faturini</title>
+    <!-- Importação da fonte JetBrains Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        customBg: '#121212',
+                        customMain: '#EDEDED',
+                        customSec: '#888888',
+                        customBorder: '#262626',
+                        customTitle: '#888888',
+                    },
+                    fontFamily: {
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            font-family: 'JetBrains Mono', monospace !important;
+        }
+
+        body {
+            background-color: #121212;
+            color: #EDEDED;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body class="bg-customBg text-customMain leading-relaxed">
+
+    <!-- Header Fixo -->
+    <nav
+        class="fixed top-0 left-0 w-full bg-[#121212]/90 backdrop-blur-md border-b border-customBorder flex justify-between items-center py-4 px-8 z-50 text-sm">
+        <div class="text-customSec truncate max-w-[60%] sm:max-w-none">
+            ~/arthur-faturini / projetos / <span class="text-customMain">sistema-pdv</span>
+        </div>
+        <div>
+            <a href="../index.html#projetos"
+                class="text-customSec hover:text-customMain transition-colors flex items-center gap-1">
+                ← Voltar
+            </a>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-16 max-w-4xl mx-auto px-6">
+
+        <!-- Hero do Projeto -->
+        <header class="mb-20">
+            <h1 class="text-2xl md:text-3xl font-bold text-customMain mb-4">Sistema PDV</h1>
+            <p class="text-customSec text-base md:text-lg mb-8 text-justify">
+                Aplicação de ponto de venda estruturada para controle de caixa, estoque e emissão rápida de pedidos com
+                interface web integrada de alta performance.
+            </p>
+
+            <!-- Caixa de Metadados -->
+            <div class="border border-customBorder bg-customBg p-6 grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs">
+                <div>
+                    <span class="text-customSec block mb-1">ANO</span>
+                    <span class="text-customMain font-semibold">2025</span>
+                </div>
+                <div>
+                    <span class="text-customSec block mb-1">TIPO</span>
+                    <span class="text-customMain font-semibold">Projeto Comercial / Autônomo</span>
+                </div>
+                <div>
+                    <span class="text-customSec block mb-1">TECNOLOGIAS</span>
+                    <span class="text-customMain font-semibold">Python, HTML, CSS, JS</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Seções de Conteúdo -->
+        <div class="space-y-20">
+
+            <!-- Seção 01 -->
+            <section>
+                <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-8 pt-8">
+                    <div class="max-w-[1200px] mx-auto px-6">
+                        <h2 class="text-lg font-semibold text-customTitle tracking-wide">// 01. VISÃO GERAL</h2>
+                    </div>
+                    <div class="w-full h-[1px] bg-customBorder mt-3"></div>
+                </div>
+                <p class="text-customSec text-sm md:text-base text-justify leading-relaxed">
+                    O Sistema PDV nasceu da necessidade de otimizar e agilizar o fluxo de atendimento e controle interno
+                    de estabelecimentos comerciais de pequeno e médio porte. O objetivo principal foi eliminar gargalos
+                    operacionais em caixas, unificando a listagem de produtos, gerenciamento de comandas das mesas,
+                    emissão de comandas impressas, cálculo automático dos valores em uma interface limpa, responsiva e
+                    de baixíssima curva de aprendizado
+                    para os operadores.
+                </p>
+            </section>
+
+            <!-- Seção 02 -->
+            <section>
+                <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-8 pt-8">
+                    <div class="max-w-[1200px] mx-auto px-6">
+                        <h2 class="text-lg font-semibold text-customTitle tracking-wide">// 02. O DESAFIO</h2>
+                    </div>
+                    <div class="w-full h-[1px] bg-customBorder mt-3"></div>
+                </div>
+                <p class="text-customSec text-sm md:text-base text-justify leading-relaxed mb-6">
+                    Em operações comerciais tradicionais, o uso de comandas em papel e processos manuais gera uma série
+                    de atritos críticos:
+                </p>
+                <ul class="list-disc list-inside text-customSec text-justify text-sm md:text-base space-y-2">
+                    <li>Erros de Transcrição: Falhas humanas na leitura de anotações manuais entre o atendimento e o
+                        balcão/cozinha.</li>
+                    <li>Gargalos de Atendimento: Lentidão no fechamento de contas e na emissão de pedidos, impactando
+                        diretamente a experiência do cliente e a produtividade da equipe sob pressão.</li>
+                    <li>Desorganização: Falta de integração entre os setores(Atendimento e Cozinha), muitas comandas em
+                        papéis, resultando em atrasos e erros na gestão
+                        operacional.</li>
+                </ul>
+            </section>
+
+            <!-- Seção 03 -->
+            <section>
+                <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-8 pt-8">
+                    <div class="max-w-[1200px] mx-auto px-6">
+                        <h2 class="text-lg font-semibold text-customTitle tracking-wide">// 03. ARQUITETURA TÉCNICA</h2>
+                    </div>
+                    <div class="w-full h-[1px] bg-customBorder mt-3"></div>
+                </div>
+                <p class="text-customSec text-sm md:text-base text-justify leading-relaxed mb-6">
+                    A arquitetura foi dividida em camadas modulares bem definidas para facilitar a manutenção e futuras
+                    expansões de features:
+                </p>
+                <!-- Caixa Estilo Terminal com a Árvore de Pastas -->
+                <div class="my-6 bg-[#161616] border border-[#262626] rounded-md p-4 overflow-x-auto">
+                    <div
+                        class="text-[#888888] text-xs font-mono mb-3 pb-2 border-b border-[#262626] flex items-center justify-between">
+                        <span>~/Sistema-PDV (Project Tree)</span>
+                        <span class="text-xs text-[#666666]">Python / HTML / CSS / JS</span>
+                    </div>
+
+                    <pre class="text-[#EDEDED] font-mono text-xs leading-relaxed">📁 <span class="text-[#EDEDED] font-bold">Sistema-PDV/</span>
+├── 📁 <span class="text-[#888888]">backend/</span>
+│   ├── 📄 __init__.py
+│   ├── 📄 api.py
+│   ├── 📄 config.py
+│   ├── 📄 impressao.py
+│   └── 📄 mesa.py
+├── 📁 <span class="text-[#888888]">data/</span>
+│   ├── 📄 config.json
+│   └── 📄 produtos.json
+├── 📁 <span class="text-[#888888]">frontend/</span>
+│   ├── 📁 <span class="text-[#888888]">css/</span>
+│   │   ├── 📄 global.css
+│   │   ├── 📄 tela_configuracoes.css
+│   │   ├── 📄 tela_inicial.css
+│   │   └── 📄 tela_mesa.css
+│   ├── 📁 <span class="text-[#888888]">js/</span>
+│   │   ├── 📄 global.js
+│   │   ├── 📄 tela_configuracoes.js
+│   │   ├── 📄 tela_inicial.js
+│   │   ├── 📄 tela_mesa.js
+│   │   └── 📄 tela_viagem.js
+│   └── 📄 index.html
+├── 📄 LICENSE
+├── 📄 README.md
+├── 📄 main.py
+└── 📄 requirements.txt</pre>
+                </div>
+            </section>
+
+            <!-- Seção 04 -->
+            <section>
+                <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-8 pt-8">
+                    <div class="max-w-[1200px] mx-auto px-6">
+                        <h2 class="text-lg font-semibold text-customTitle tracking-wide">// 04. RESULTADOS & IMPACTO
+                        </h2>
+                    </div>
+                    <div class="w-full h-[1px] bg-customBorder mt-3"></div>
+                </div>
+                <p class="text-customSec text-sm md:text-base text-justify leading-relaxed">
+                    O sistema entregou uma redução perceptível no tempo médio de atendimento por cliente e lançamento de
+                    pedidos, dando fluidez à rotina do estabelecimento. A organização
+                    centralizada suprimiu a perda por comandas, devido ao maior controle e precisão. Dessa forma,
+                    provou-se o valor real de uma solução de software desenvolvida sob medida para resolver uma dor real
+                    de mercado.
+                </p>
+            </section>
+
+        </div>
+
+        <!-- Seção de Ações (Antes do Footer) -->
+        <div
+            class="mt-24 pt-8 border-t border-customBorder flex flex-col sm:flex-row justify-between items-center gap-4">
+            <!-- Link para o Repositório -->
+            <a href="https://github.com/ArthurFaturini/Sistema-PDV" target="_blank"
+                class="text-customMain border border-customBorder px-4 py-2 text-sm hover:border-customSec transition-colors flex items-center gap-2 w-full sm:w-auto justify-center">
+                [ Ver Repositório no GitHub ]
+            </a>
+
+            <!-- Próximo Projeto -->
+            <!-- <a href="soundpad-case.html"
+                class="text-customSec hover:text-customMain text-sm transition-colors flex items-center gap-1 w-full sm:w-auto justify-end">
+                Próximo Projeto →
+            </a> -->
+        </div>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="text-center py-16 px-6 text-customSec text-xs border-t border-customBorder mt-16">
+        Desenvolvido por Arthur Faturini — 2026
+    </footer>
+
+</body>
+
+</html>
