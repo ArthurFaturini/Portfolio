@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Experimento — Laboratório Maker | Arthur Faturini</title>
+    <link rel="icon" type="image/svg-xml"
+        href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2224%22%20height=%2224%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20stroke=%22currentColor%22%20stroke-width=%221.5%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%20class=%22icon%20icon-tabler%20icons-tabler-outline%20icon-tabler-terminal-2%22%3E%3Cpath%20stroke=%22none%22%20d=%22M0%200h24v24H0z%22%20fill=%22none%22%20/%3E%3Cpath%20d=%22M8%209l3%203l-3%203%22%20/%3E%3Cpath%20d=%22M13%2015l3%200%22%20/%3E%3Cpath%20d=%22M3%206a2%202%200%200%201%202%20-2h14a2%202%200%200%201%202%202v12a2%202%200%200%201%20-2%202h-14a2%202%200%200%201%20-2%20-2l0%20-12%22%20/%3E%3C/svg%3E">
+    <!-- Importação da fonte JetBrains Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        customBg: '#121212',
+                        customMain: '#EDEDED',
+                        customSec: '#888888',
+                        customBorder: '#262626',
+                        customTitle: '#888888',
+                    },
+                    fontFamily: {
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            font-family: 'JetBrains Mono', monospace !important;
+        }
+
+        body {
+            background-color: #121212;
+            color: #EDEDED;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body class="bg-customBg text-customMain leading-relaxed">
+
+    <!-- Navegação / Header Fixo -->
+    <nav
+        class="fixed top-0 left-0 w-full bg-[#121212]/90 backdrop-blur-md border-b border-customBorder flex justify-between items-center py-4 px-8 z-50 text-sm">
+        <div class="text-customSec truncate max-w-[60%] sm:max-w-none">
+            ~/arthur-faturini / laboratorio-maker / <span class="text-customMain">nome-da-ideia</span>
+        </div>
+        <div>
+            <a href="laboratorio.html"
+                class="text-customSec hover:text-customMain transition-colors flex items-center gap-1">
+                ← Voltar ao Laboratório
+            </a>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal do Detalhe do Experimento -->
+    <main class="pt-32 pb-16 max-w-4xl mx-auto px-6">
+
+        <!-- Hero do Experimento -->
+        <header class="mb-20">
+            <h1 class="text-2xl md:text-3xl font-bold text-customMain mb-4">Automação de Irrigação IoT</h1>
+            <p class="text-customSec text-base md:text-lg mb-8 text-justify">
+                Projeto conceitual utilizando microcontroladores e sensores de umidade do solo para prototipagem de uma
+                rede doméstica de controle hídrico automatizado.
+            </p>
+
+            <!-- Caixa de Metadados (Padrão de 3 colunas solicitado) -->
+            <div class="border border-customBorder bg-customBg p-6 grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs">
+                <div>
+                    <span class="text-customSec block mb-1">STATUS</span>
+                    <span class="text-customMain font-semibold">[Em Planejamento / Rascunho]</span>
+                </div>
+                <div>
+                    <span class="text-customSec block mb-1">CATEGORIA</span>
+                    <span class="text-customMain font-semibold">Hardware / IoT / Automação</span>
+                </div>
+                <div>
+                    <span class="text-customSec block mb-1">STACK TEÓRICA</span>
+                    <span class="text-customMain font-semibold">ESP32, MicroPython, MQTT, C++</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Seções de Conteúdo -->
+        <div class="space-y-20">
+
+            <!-- Seção // 01. A DOR (O PROBLEMA) -->
+            <section>
+                <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-12 pt-8">
+                    <div class="max-w-[1200px] mx-auto px-6">
+                        <h2 class="text-lg font-semibold text-customTitle tracking-wide">// 01. A DOR (O PROBLEMA)</h2>
+                    </div>
+                    <div class="w-full h-[1px] bg-customBorder mt-3"></div>
+                </div>
+                <p class="text-customSec text-sm md:text-base text-justify leading-relaxed">
+                    A manutenção manual de plantas em períodos de ausência prolongada ou rotinas intensas de
+                    desenvolvimento gera perdas recorrentes por falhas humanas na frequência de rega. Sistemas
+                    comerciais fechados existentes no mercado carecem de flexibilidade para integração com automações
+                    customizadas via rede local ou dashboards próprios, motivando a necessidade de prototipar uma
+                    solução modular, econômica e transparente de ponta a ponta.
+                </p>
+            </section>
+
+            <!-- Seção // 02. O RASCUNHO (ARQUITETURA) -->
+            <section>
+                <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-12 pt-8">
+                    <div class="max-w-[1200px] mx-auto px-6">
+                        <h2 class="text-lg font-semibold text-customTitle tracking-wide">// 02. O RASCUNHO (ARQUITETURA)
+                        </h2>
+                    </div>
+                    <div class="w-full h-[1px] bg-customBorder mt-3"></div>
+                </div>
+                <p class="text-customSec text-sm md:text-base text-justify leading-relaxed mb-6">
+                    Abaixo está o rascunho esquemático preliminar da topologia de comunicação planejada para o hardware
+                    e a camada de controle:
+                </p>
+                <!-- Bloco Visual Simulando um Terminal -->
+                <div
+                    class="border border-customBorder p-6 bg-[#161616] text-xs text-customSec space-y-2 font-mono overflow-x-auto shadow-inner">
+                    <p class="text-customMain font-semibold"># Topologia de Arquitetura Preliminar (ASCII Diagram):</p>
+                    <p class="text-[#777BB4]">[ Sensor Capacitivo de Umidade ] --- (ADC) ---> [ ESP32 / Microcontroller
+                        ]</p>
+                    <p class="text-customSec"> |</p>
+                    <p class="text-customSec"> (Wi-Fi / MQTT)</p>
+                    <p class="text-customSec"> v</p>
+                    <p class="text-[#3776AB]">[ Broker MQTT Local ] --------> [ Dashboard de Monitoramento ]</p>
+                    <p class="text-customSec"> |</p>
+                    <p class="text-customSec"> (GPIO Trigger / Relé)</p>
+                    <p class="text-customSec"> v</p>
+                    <p class="text-[#2496ED]">[ Eletroválvula 12V / Bomba d'Água ] &lt;-----------------------+</p>
+                </div>
+            </section>
+
+            <!-- Seção // 03. APRENDIZADOS & PRÓXIMOS PASSOS -->
+            <section>
+                <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-12 pt-8">
+                    <div class="max-w-[1200px] mx-auto px-6">
+                        <h2 class="text-lg font-semibold text-customTitle tracking-wide">// 03. APRENDIZADOS & PRÓXIMOS
+                            PASSOS</h2>
+                    </div>
+                    <div class="w-full h-[1px] bg-customBorder mt-3"></div>
+                </div>
+                <p class="text-customSec text-sm md:text-base text-justify leading-relaxed">
+                    Nesta fase de concepção, o principal desafio identificado diz respeito ao isolamento adequado de
+                    umidade nos conectores e ao consumo energético otimizado do ESP32 em modo deep-sleep. Como próximos
+                    passos, planejo realizar testes de bancada utilizando fontes de alimentação chaveadas isoladas e
+                    escrever o primeiro script de validação de leitura analógica do sensor de solo.
+                </p>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- Rodapé Padrão -->
+    <footer class="text-center py-16 px-6 text-customSec text-xs border-t border-customBorder mt-16">
+        Desenvolvido por Arthur Faturini — 2026
+    </footer>
+
+</body>
+
+</html>

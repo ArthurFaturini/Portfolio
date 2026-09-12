@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratório Maker — Arthur Faturini</title>
+    <link rel="icon" type="image/svg-xml"
+        href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2224%22%20height=%2224%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20stroke=%22currentColor%22%20stroke-width=%221.5%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%20class=%22icon%20icon-tabler%20icons-tabler-outline%20icon-tabler-terminal-2%22%3E%3Cpath%20stroke=%22none%22%20d=%22M0%200h24v24H0z%22%20fill=%22none%22%20/%3E%3Cpath%20d=%22M8%209l3%203l-3%203%22%20/%3E%3Cpath%20d=%22M13%2015l3%200%22%20/%3E%3Cpath%20d=%22M3%206a2%202%200%200%201%202%20-2h14a2%202%200%200%201%202%202v12a2%202%200%200%201%20-2%202h-14a2%202%200%200%201%20-2%20-2l0%20-12%22%20/%3E%3C/svg%3E">
+    <!-- Importação da fonte JetBrains Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        customBg: '#121212',
+                        customMain: '#EDEDED',
+                        customSec: '#888888',
+                        customBorder: '#262626',
+                        customTitle: '#888888',
+                    },
+                    fontFamily: {
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            font-family: 'JetBrains Mono', monospace !important;
+        }
+
+        body {
+            background-color: #121212;
+            color: #EDEDED;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body class="bg-customBg text-customMain leading-relaxed">
+
+    <!-- Navegação / Header Fixo -->
+    <nav
+        class="fixed top-0 left-0 w-full bg-[#121212]/90 backdrop-blur-md border-b border-customBorder flex justify-between items-center py-4 px-8 z-50 text-sm">
+        <div class="text-customSec truncate max-w-[60%] sm:max-w-none">
+            ~/arthur-faturini / <span class="text-customMain">laboratorio-maker</span>
+        </div>
+        <div>
+            <a href="../index.html#laboratorio"
+                class="text-customSec hover:text-customMain transition-colors flex items-center gap-1">
+                ← Voltar ao Início
+            </a>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="pt-32 pb-24 max-w-[1200px] mx-auto px-6">
+
+        <!-- Hero / Cabeçalho da Seção -->
+        <header class="mb-20">
+            <h1 class="text-2xl md:text-3xl font-bold text-customMain mb-4">Laboratório Maker & Ideias</h1>
+            <p class="text-customSec text-base md:text-lg max-w-3xl text-justify">
+                Um espaço dedicado a experimentações, arquitetura de sistemas em planejamento, consertos do cotidiano e
+                ideias(mirabolantes) que estão saindo do papel.
+            </p>
+        </header>
+
+        <!-- Seção: Criações & Experimentos -->
+        <section>
+            <!-- Divisória de ponta a ponta padronizada -->
+            <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-12 pt-8">
+                <div class="max-w-[1200px] mx-auto px-6">
+                    <h2 class="text-lg font-semibold text-customTitle tracking-wide">// CRIAÇÕES & RASCUNHOS</h2>
+                </div>
+                <div class="w-full h-[1px] bg-customBorder mt-3"></div>
+            </div>
+
+            <!-- Grid de Cartões (2 Colunas) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Cartão 1 -->
+                <div
+                    class="border border-customBorder p-8 bg-customBg flex flex-col justify-between hover:border-customSec transition-colors">
+                    <div>
+                        <div class="flex justify-between items-start gap-4 mb-4">
+                            <h3 class="text-lg text-customMain">Assistente Virtual com IA Local</h3>
+                            <span
+                                class="text-xs text-customSec border border-customBorder px-2 py-1 whitespace-nowrap flex-shrink-0">[IA
+                                Local]</span>
+                        </div>
+                        <p class="text-customSec text-sm text-justify mb-6">
+                            Arquitetura conceitual de um assistente pessoal inteligente projetado para ser executado
+                            100% offline em hardware local. Elimina a dependência de APIs pagas em nuvem e o
+                            compartilhamento de dados com terceiros, integrando modelos de linguagem locais (LLMs) ao
+                            controle de rotinas do sistema operacional.
+                        </p>
+                    </div>
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="text-amber-400/80">Status: Em planejamento</span>
+                        <a href="template.html"
+                            class="text-customMain border-b border-dotted border-customSec hover:text-customSec transition-colors">[+
+                            ver detalhes]</a>
+                    </div>
+                </div>
+
+                <!-- Cartão 2 -->
+                <div
+                    class="border border-customBorder p-8 bg-customBg flex flex-col justify-between hover:border-customSec transition-colors">
+                    <div>
+                        <div class="flex justify-between items-start gap-4 mb-4">
+                            <h3 class="text-lg text-customMain">ML para Avaliação de Teoria Musical</h3>
+                            <span
+                                class="text-xs text-customSec border border-customBorder px-2 py-1 whitespace-nowrap flex-shrink-0">[Machine
+                                Learning]</span>
+                        </div>
+                        <p class="text-customSec text-sm text-justify mb-6">
+                            Conceito de modelo de aprendizado de máquina inspirado em literatura científica sobre a
+                            evolução e simplificação da música moderna. O algoritmo processa parâmetros de teoria
+                            musical e extração de características de áudio. Visando avaliar objetivamente a complexidade
+                            de composições atuais em comparação a padrões clássicos e históricos.
+                        </p>
+                    </div>
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="text-amber-400/80">Status: Em planejamento</span>
+                        <a href="#"
+                            class="text-customMain border-b border-dotted border-customSec hover:text-customSec transition-colors">[+
+                            ver detalhes]</a>
+                    </div>
+                </div>
+
+                <!-- Cartão 3 -->
+                <div
+                    class="border border-customBorder p-8 bg-customBg flex flex-col justify-between hover:border-customSec transition-colors">
+                    <div>
+                        <div class="flex justify-between items-start gap-4 mb-4">
+                            <h3 class="text-lg text-customMain">Facilitador de Servidores de Jogos</h3>
+                            <span
+                                class="text-xs text-customSec border border-customBorder px-2 py-1 whitespace-nowrap flex-shrink-0">[Redes
+                                / Utilidade]</span>
+                        </div>
+                        <p class="text-customSec text-sm text-justify mb-6">
+                            Ferramenta desktop voltada a simplificar a criação e exposição de servidores de jogos
+                            multiplayer. Abstrai a complexidade de terminal do Playit.gg e a instalação manual de
+                            dependências, oferecendo uma interface gráfica intuitiva para que o usuário médio suba
+                            servidores locais e túneis de rede (CGNAT) com poucos cliques.
+                        </p>
+                    </div>
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="text-amber-400/80">Status: Em planejamento</span>
+                        <a href="#"
+                            class="text-customMain border-b border-dotted border-customSec hover:text-customSec transition-colors">[+
+                            ver detalhes]</a>
+                    </div>
+                </div>
+
+                <!-- Cartão 4 -->
+                <div
+                    class="border border-customBorder p-8 bg-customBg flex flex-col justify-between hover:border-customSec transition-colors">
+                    <div>
+                        <div class="flex justify-between items-start gap-4 mb-4">
+                            <h3 class="text-lg text-customMain">Soundpad Desktop</h3>
+                            <span
+                                class="text-xs text-customSec border border-customBorder px-2 py-1 whitespace-nowrap flex-shrink-0">[Full
+                                Stack / App Desktop]</span>
+                        </div>
+                        <p class="text-customSec text-sm text-justify mb-6">
+                            Aplicação desktop de áudio desenvolvida com arquitetura híbrida (Python e Web). Foca na
+                            usabilidade e simplicidade visual para criadores de conteúdo e uso em chamadas no Discord.
+                            Gerenciamento simplificado de biblioteca de sons e baixíssima curva de aprendizado.
+                        </p>
+                    </div>
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="text-sky-400">Status: Em desenvolvimento</span>
+                        <a href="#"
+                            class="text-customMain border-b border-dotted border-customSec hover:text-customSec transition-colors">[+
+                            ver detalhes]</a>
+                    </div>
+                </div>
+
+                <!-- Cartão 5 -->
+                <div
+                    class="border border-customBorder p-8 bg-customBg flex flex-col justify-between hover:border-customSec transition-colors">
+                    <div>
+                        <div class="flex justify-between items-start gap-4 mb-4">
+                            <h3 class="text-lg text-customMain">Setup de Streaming Remoto</h3>
+                            <span
+                                class="text-xs text-customSec border border-customBorder px-2 py-1 whitespace-nowrap flex-shrink-0">[Redes
+                                / Gambiarra
+                                Funcional]</span>
+                        </div>
+                        <p class="text-customSec text-sm text-justify mb-6">
+                            Infraestrutura de streaming de alta performance e baixa latência projetada para jogos,
+                            contornando limitações de hardware local. Combina o Tailscale para criar uma rede Mesh
+                            privada via tunelamento seguro com o ecossistema Sunshine/Moonlight.
+                        </p>
+                    </div>
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="text-emerald-400">Status: Concluído / Em uso</span>
+                        <a href="#"
+                            class="text-customMain border-b border-dotted border-customSec hover:text-customSec transition-colors">[+
+                            ver detalhes]</a>
+                    </div>
+                </div>
+
+                <!-- Cartão 6 -->
+                <div
+                    class="border border-customBorder p-8 bg-customBg flex flex-col justify-between hover:border-customSec transition-colors">
+                    <div>
+                        <div class="flex justify-between items-start gap-4 mb-4">
+                            <h3 class="text-lg text-customMain">Mini-Servidor J8</h3>
+                            <span
+                                class="text-xs text-customSec border border-customBorder px-2 py-1 whitespace-nowrap flex-shrink-0">[Reciclagem
+                                Tech / Home Lab]</span>
+                        </div>
+                        <p class="text-customSec text-sm text-justify mb-6">
+                            Servidor de monitoramento e controle remoto hospedado em hardware reaproveitado (Samsung
+                            J8). Integrado a um bot no Telegram em Python para comandos de controle remoto, gestão de
+                            status do PC principal, Wake-on-LAN e acesso via SSH para manutenção emergencial.
+                        </p>
+                    </div>
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="text-orange-400/80">Status: Reavaliando projeto</span>
+                        <a href="#"
+                            class="text-customMain border-b border-dotted border-customSec hover:text-customSec transition-colors">[+
+                            ver detalhes]</a>
+                    </div>
+                </div>
+
+                <!-- Cartão 7 -->
+                <div
+                    class="border border-customBorder p-8 bg-customBg flex flex-col justify-between hover:border-customSec transition-colors">
+                    <div>
+                        <div class="flex justify-between items-start gap-4 mb-4">
+                            <h3 class="text-lg text-customMain">Aplicativo de Finanças Pessoal</h3>
+                            <span
+                                class="text-xs text-customSec border border-customBorder px-2 py-1 whitespace-nowrap flex-shrink-0">[Redes
+                                / Fintech]</span>
+                        </div>
+                        <p class="text-customSec text-sm text-justify mb-6">
+                            Aplicação financeira multi-usuário containerizada no Docker e restrita à rede privada via
+                            Tailscale. Projetada para gestão individual e compartilhada de contas de casal com segurança
+                            e sem dependência de nuvem pública.
+                        </p>
+                    </div>
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="text-sky-400">Status: Em desenvolvimento</span>
+                        <a href="#"
+                            class="text-customMain border-b border-dotted border-customSec hover:text-customSec transition-colors">[+
+                            ver detalhes]</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé Padrão -->
+    <footer class="text-center py-16 px-6 text-customSec text-xs border-t border-customBorder mt-16">
+        Desenvolvido por Arthur Faturini — 2026
+    </footer>
+
+</body>
+
+</html>
