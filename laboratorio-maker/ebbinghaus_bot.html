@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Ebbinghaus (Obsidian Reviewer)</title>
+    <link rel="icon" type="image/svg-xml"
+        href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2224%22%20height=%2224%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20stroke=%22currentColor%22%20stroke-width=%221.5%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%20class=%22icon%20icon-tabler%20icons-tabler-outline%20icon-tabler-terminal-2%22%3E%3Cpath%20stroke=%22none%22%20d=%22M0%200h24v24H0z%22%20fill=%22none%22%20/%3E%3Cpath%20d=%22M8%209l3%203l-3%203%22%20/%3E%3Cpath%20d=%22M13%2015l3%200%22%20/%3E%3Cpath%20d=%22M3%206a2%202%200%200%201%202%20-2h14a2%202%200%200%201%202%202v12a2%202%200%200%201%20-2%202h-14a2%202%200%200%201%20-2%20-2l0%20-12%22%20/%3E%3C/svg%3E">
+    <!-- Importação da fonte JetBrains Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        customBg: '#121212',
+                        customMain: '#EDEDED',
+                        customSec: '#888888',
+                        customBorder: '#262626',
+                        customTitle: '#888888',
+                    },
+                    fontFamily: {
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            font-family: 'JetBrains Mono', monospace !important;
+        }
+
+        body {
+            background-color: #121212;
+            color: #EDEDED;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body class="bg-customBg text-customMain leading-relaxed">
+
+    <!-- Navegação / Header Fixo -->
+    <nav
+        class="fixed top-0 left-0 w-full bg-[#121212]/90 backdrop-blur-md border-b border-customBorder flex justify-between items-center py-4 px-8 z-50 text-sm">
+        <div class="text-customSec truncate max-w-[60%] sm:max-w-none">
+            ~/arthur-faturini / laboratorio-maker / <span class="text-customMain">ebbinghaus-bot</span>
+        </div>
+        <div>
+            <a href="laboratorio.html"
+                class="text-customSec hover:text-customMain transition-colors flex items-center gap-1">
+                ← Voltar ao Laboratório
+            </a>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal do Detalhe do Experimento -->
+    <main class="pt-32 pb-16 max-w-4xl mx-auto px-6">
+
+        <!-- Hero do Experimento -->
+        <header class="mb-20">
+            <h1 class="text-2xl md:text-3xl font-bold text-customMain mb-4">Bot Ebbinghaus (Obsidian Reviewer)</h1>
+            <p class="text-customSec text-base md:text-lg mb-8 text-justify">
+                Automação de repetição espaçada baseada na curva de Ebbinghaus. O fluxo em n8n extrai dados
+                das notas do Obsidian, processa o conteúdo via LLM com engenharia de prompt para gerar
+                revisões personalizadas e envia questionários interativos (discursivos e múltipla escolha)
+                diretamente no Telegram.
+            </p>
+
+            <!-- Caixa de Metadados (Padrão de 3 colunas solicitado) -->
+            <div class="border border-customBorder bg-customBg p-6 grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs">
+                <div>
+                    <span class="text-customSec block mb-1">STATUS</span>
+                    <span class="text-customMain font-semibold">[Pausado]</span>
+                </div>
+                <div>
+                    <span class="text-customSec block mb-1">CATEGORIA</span>
+                    <span class="text-customMain font-semibold">Automação(N8N) / IA / Telegram Bot</span>
+                </div>
+                <div>
+                    <span class="text-customSec block mb-1">STACK TEÓRICA</span>
+                    <span class="text-customMain font-semibold">N8N, IA, Telegram, APIs</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Seções de Conteúdo -->
+        <div class="space-y-20">
+
+            <!-- Seção // 01. A DOR (O PROBLEMA) -->
+            <section>
+                <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-12 pt-8">
+                    <div class="max-w-[1200px] mx-auto px-6">
+                        <h2 class="text-lg font-semibold text-customTitle tracking-wide">// 01. A DOR (O PROBLEMA)</h2>
+                    </div>
+                    <div class="w-full h-[1px] bg-customBorder mt-3"></div>
+                </div>
+                <p class="text-customSec text-sm md:text-base text-justify leading-relaxed">
+                    Acumular notas no Obsidian cria a falsa sensação de aprendizado contínuo, mas a falta de um sistema
+                    de revisão periódica faz com que a retenção caia drasticamente devido à Curva de Esquecimento de
+                    Ebbinghaus. Por outro lado, o processo manual de criar flashcards ou resumos diários exige um tempo
+                    considerável e gera um atrito que leva ao abandono do hábito. A dor central é a ausência de um fluxo
+                    automatizado e passivo que extraia o conhecimento já anotado no vault, transforme essas informações
+                    em questionários dinâmicos (discursivos e múltipla escolha) via IA e entregue essas revisões ativas
+                    no aplicativo de mensagem utilizado no dia a dia, sem demandar esforço manual de criação.
+                </p>
+            </section>
+
+            <!-- Seção // 02. O RASCUNHO (ARQUITETURA) -->
+            <section>
+                <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-12 pt-8">
+                    <div class="max-w-[1200px] mx-auto px-6">
+                        <h2 class="text-lg font-semibold text-customTitle tracking-wide">// 02. O RASCUNHO (ARQUITETURA)
+                        </h2>
+                    </div>
+                    <div class="w-full h-[1px] bg-customBorder mt-3"></div>
+                </div>
+                <p class="text-customSec text-sm md:text-base text-justify leading-relaxed mb-6">
+                    Abaixo está a arquitetura conceitual do fluxo de automação e revisão ativa. A topologia conecta o
+                    repositório local de conhecimento ao orquestrador de eventos para geração e entrega dinâmica de
+                    questionários:
+                </p>
+
+                <!-- Caixa Estilo Terminal com o Diagrama ASCII -->
+                <div
+                    class="my-6 bg-[#161616] border border-[#262626] rounded-md p-5 font-mono text-xs text-[#EDEDED] overflow-x-auto">
+                    <div
+                        class="text-[#888888] text-xs pb-3 mb-5 border-b border-[#262626] flex items-center justify-between">
+                        <span>~/arquitetura/ebbinghaus-bot</span>
+                        <span class="text-[#666666]">Automações N8N</span>
+                    </div>
+
+                    <pre class="leading-relaxed">
+# Topologia de Arquitetura (ASCII Diagram):
+
+[ Vault Obsidian (.md) ] ---> (Leitura / Extração de Notas) ---> [ Node de Ingestão (n8n) ]
+                                                                        |
+                                                                        v
+[ Telegram App (Usuário) ] <--- (Envio do Quiz / Inline Keys) <--- [ Pipeline LLM ]
+                                                                    (Prompt Ebbinghaus: Resumo
+                                                                     + Questões Discursivas/MC)
+    </pre>
+                </div>
+            </section>
+
+            <!-- Seção // 03. APRENDIZADOS & PRÓXIMOS PASSOS -->
+            <section>
+                <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-12 pt-8">
+                    <div class="max-w-[1200px] mx-auto px-6">
+                        <h2 class="text-lg font-semibold text-customTitle tracking-wide">// 03. APRENDIZADOS & PRÓXIMOS
+                            PASSOS</h2>
+                    </div>
+                    <div class="w-full h-[1px] bg-customBorder mt-3"></div>
+                </div>
+                <p class="text-customSec text-sm md:text-base text-justify leading-relaxed">
+                    Este projeto foi o catalisador fundamental para o meu aprendizado prático no n8n e na arquitetura de
+                    automação de fluxos baseados em eventos. O desenvolvimento foi temporariamente pausado para
+                    priorizar a construção do DHBot, mas toda a bagagem de orquestração adquirida será reaproveitada.
+                    Como próximos passos para retomar o projeto, o foco está na implementação do pipeline ponta a ponta:
+                    estruturar o nó de extração e parsing dos arquivos Markdown do vault do Obsidian, configurar a
+                    comunicação com a API da LLM com um prompt otimizado para geração de questões e formatar a entrega
+                    interativa das mensagens e botões de resposta diretamente no Telegram.
+                </p>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- Rodapé Padrão -->
+    <footer class="text-center py-16 px-6 text-customSec text-xs border-t border-customBorder mt-16">
+        Desenvolvido por Arthur Faturini — 2026
+    </footer>
+
+</body>
+
+</html>
