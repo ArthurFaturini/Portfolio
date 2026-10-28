@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini-Servidor J8</title>
+    <title>Facilitador de Servidores de Jogos</title>
     <link rel="icon" type="image/svg-xml"
         href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2224%22%20height=%2224%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20stroke=%22currentColor%22%20stroke-width=%221.5%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%20class=%22icon%20icon-tabler%20icons-tabler-outline%20icon-tabler-terminal-2%22%3E%3Cpath%20stroke=%22none%22%20d=%22M0%200h24v24H0z%22%20fill=%22none%22%20/%3E%3Cpath%20d=%22M8%209l3%203l-3%203%22%20/%3E%3Cpath%20d=%22M13%2015l3%200%22%20/%3E%3Cpath%20d=%22M3%206a2%202%200%200%201%202%20-2h14a2%202%200%200%201%202%202v12a2%202%200%200%201%20-2%202h-14a2%202%200%200%201%20-2%20-2l0%20-12%22%20/%3E%3C/svg%3E">
     <!-- Importação da fonte JetBrains Mono -->
@@ -49,12 +49,12 @@
     <nav
         class="fixed top-0 left-0 w-full bg-[#121212]/90 backdrop-blur-md border-b border-customBorder flex justify-between items-center py-4 px-8 z-50 text-sm">
         <div class="text-customSec truncate max-w-[60%] sm:max-w-none">
-            ~/arthur-faturini / laboratorio-maker / <span class="text-customMain">mini-servidor</span>
+            ~/arthur-faturini / projetos / <span class="text-customMain">facilitador-servidor</span>
         </div>
         <div>
-            <a href="laboratorio.html"
+            <a href="projetos.html"
                 class="text-customSec hover:text-customMain transition-colors flex items-center gap-1">
-                ← Voltar ao Laboratório
+                ← Voltar aos Projetos
             </a>
         </div>
     </nav>
@@ -64,26 +64,27 @@
 
         <!-- Hero do Experimento -->
         <header class="mb-20">
-            <h1 class="text-2xl md:text-3xl font-bold text-customMain mb-4">Mini-Servidor J8</h1>
+            <h1 class="text-2xl md:text-3xl font-bold text-customMain mb-4">Facilitador de Servidores de Jogos</h1>
             <p class="text-customSec text-base md:text-lg mb-8 text-justify">
-                Servidor de monitoramento e controle remoto hospedado em hardware reaproveitado (Samsung J8). Integrado
-                a um bot no Telegram em Python para comandos de controle remoto, gestão de
-                status do PC principal, Wake-on-LAN e acesso via SSH para manutenção emergencial.
+                Ferramenta desktop voltada a simplificar a criação e exposição de servidores de jogos
+                multiplayer. Abstrai a complexidade de terminal do Playit.gg e a instalação manual de
+                dependências, oferecendo uma interface gráfica intuitiva para que o usuário médio suba
+                servidores locais e túneis de rede (CGNAT) com poucos cliques.
             </p>
 
             <!-- Caixa de Metadados (Padrão de 3 colunas solicitado) -->
             <div class="border border-customBorder bg-customBg p-6 grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs">
                 <div>
                     <span class="text-customSec block mb-1">STATUS</span>
-                    <span class="text-customMain font-semibold">[Reavaliando projeto]</span>
+                    <span class="text-customMain font-semibold">Em Planejamento / Rascunho</span>
                 </div>
                 <div>
                     <span class="text-customSec block mb-1">CATEGORIA</span>
-                    <span class="text-customMain font-semibold">Reciclagem Tech / Home Lab</span>
+                    <span class="text-customMain font-semibold">Redes / Utilidade / App Desktop</span>
                 </div>
                 <div>
-                    <span class="text-customSec block mb-1">STACK TEÓRICA</span>
-                    <span class="text-customMain font-semibold">Termux(Linux), Python, Tailscale</span>
+                    <span class="text-customSec block mb-1">TECNOLOGIAS</span>
+                    <span class="text-customMain font-semibold">Python, HTML, CSS(Tailwind), JS</span>
                 </div>
             </div>
         </header>
@@ -100,13 +101,13 @@
                     <div class="w-full h-[1px] bg-customBorder mt-3"></div>
                 </div>
                 <p class="text-customSec text-sm md:text-base text-justify leading-relaxed">
-                    Manter dependência exclusiva do PC principal para acesso remoto cria um ponto único de falha: se a
-                    máquina hibernar, travar ou perder conexão, todo o controle à distância é interrompido sem
-                    possibilidade de intervenção manual. Por outro lado, manter servidores em nuvem ou comprar hardware
-                    dedicado de infraestrutura gera custos desnecessários. A dor central é a ausência de um nó de apoio
-                    local, de baixíssimo consumo energético e alta disponibilidade, capaz de monitorar o ambiente,
-                    enviar comandos de recuperação (como Wake-on-LAN) e fornecer um canal de emergência via linha de
-                    comando (SSH) utilizando hardware reaproveitado.
+                    Criar e hospedar um servidor local de jogos para jogar com amigos ainda é um processo burocrático e
+                    frustrante para o usuário médio. Além de barreiras de rede como o CGNAT, soluções de tunelamento
+                    eficientes como o Playit.gg dependem de
+                    interfaces em linha de comando e etapas manuais confusas. Somado a isso, o usuário precisa baixar
+                    dependências do jogo e configurar arquivos localmente. A dor central é a ausência de uma ferramenta
+                    visual única ('1-click setup') que abstraia toda a complexidade de terminal, automap e roteamento de
+                    túneis em segundo plano.
                 </p>
             </section>
 
@@ -120,10 +121,9 @@
                     <div class="w-full h-[1px] bg-customBorder mt-3"></div>
                 </div>
                 <p class="text-customSec text-sm md:text-base text-justify leading-relaxed mb-6">
-                    Abaixo está a arquitetura infraestrutura local. O fluxo utiliza o
-                    dispositivo Android(J8) reaproveitado como nó centralizador de monitoramento e gateway de
-                    recuperação
-                    para a máquina principal:
+                    Abaixo está a arquitetura conceitual de abstração de infraestrutura. O fluxo substitui a manipulação
+                    de linhas de comando por uma interface única que gerencia o ambiente local e a ponte de rede de
+                    forma transparente:
                 </p>
 
                 <!-- Caixa Estilo Terminal com o Diagrama ASCII -->
@@ -131,22 +131,25 @@
                     class="my-6 bg-[#161616] border border-[#262626] rounded-md p-5 font-mono text-xs text-[#EDEDED] overflow-x-auto">
                     <div
                         class="text-[#888888] text-xs pb-3 mb-5 border-b border-[#262626] flex items-center justify-between">
-                        <span>~/arquitetura/mini-servidor</span>
-                        <span class="text-[#666666]">Edge Gateway & WoL Pipeline</span>
+                        <span>~/arquitetura/facilitador-servidor</span>
+                        <span class="text-[#666666]">Tunelamento Automático e Fluxo de Interface</span>
                     </div>
 
                     <pre class="leading-relaxed">
-# Topologia de Arquitetura (ASCII Diagram):
+# Topologia de Arquitetura Preliminar (ASCII Diagram):
 
-[ Usuário / Telegram App ] ---> (Comandos via Bot) ---> [ Servidor J8 / Termux (Python) ]
-                                                                   |
-                                          +------------------------+------------------------+
-                                          |                                                 |
-                                          v (Rede Local)                                    v (Acesso Direto)
-                              [ Pacote Magic / Wake-on-LAN ]                     [ Terminal SSH / Shell ]
-                                          |                                                 |
-                                          v                                                 v
-                              [ PC Principal (Bancada) ] <----------------------------------+
+[ Interface Gráfica do App] ---> (Ação: 1-Click Server) ---> [ Orquestrador Local (App) ]
+                                                                |
+                                    +------------------------------+------------------------------+
+                                    |                                                             |
+                                    v                                                             v
+                        [ Instalação & Dependências ]                                 [ Agente Playit.gg CLI ]
+                        (Java, Binários, Server.jar)                                  (Criação de Túnel TCP/UDP)
+                                    |                                                             |
+                                    +------------------------------+------------------------------+
+                                                                |
+                                                                v
+[ Conexão de Amigos / IP Público ] <------------------------ [ Roteamento Ativo ]
     </pre>
                 </div>
             </section>
@@ -161,17 +164,16 @@
                     <div class="w-full h-[1px] bg-customBorder mt-3"></div>
                 </div>
                 <p class="text-customSec text-sm md:text-base text-justify leading-relaxed">
-                    A implementação prática proporcionou um aprendizado valioso em administração de sistemas Linux,
-                    gerencimento de conexões SSH e alocação eficiente de recursos em hardware restrito. O processo
-                    também refinou minha habilidade de engenharia de prompt e gestão de contexto ao utilizar IAs para
-                    auxiliar no desenvolvimento, visto que tive muito problema com elas durante a execução do
-                    projeto(muito!). Atualmente, o projeto encontra-se em fase de reavaliação de
-                    infraestrutura: embora o J8 tenha cumprido seu papel, suas limitações
-                    de processamento indicam a necessidade de um upgrade de hardware. A evolução do projeto poderia ser
-                    migrar para um Raspberry Pi, ponto baixo, porém bem estruturado, ou evoluir para um notebook
-                    reutilizado de médio porte e,
-                    como ponto alto, converter o reaproveitamento de componentes legados do meu próprio PC principal em
-                    um servidor dedicado de alta performance comparado aos outros modelos.
+                    Inicialmente a ideia era usar o Ngrok para fazer o tunelamento, entretanto, devido a
+                    insustentabilidade do serviço, optei por utilizar o Playit.gg. Essa mudança de escopo inicial trouxe
+                    a percepção de que a maior complexidade
+                    do projeto não está no tunelamento em si, mas em gerenciar subprocessos de sistema de forma
+                    assíncrona e segura sem travar a interface gráfica, além de manter um aplicativo funcional e leve
+                    sem sobrecarregar o sistema que já está hosteando um servidor. Como próximos passos para o
+                    desenvolvimento da
+                    ferramenta, planejo construir um protótipo em Python focado no ciclo de
+                    vida do servidor de Minecraft (download de Java + execução do .jar), integrando a leitura de logs do
+                    Playit.gg via CLI para capturar o IP gerado automaticamente e exibi-lo na tela.
                 </p>
             </section>
 

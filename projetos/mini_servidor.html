@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assistente Virtual com IA Local</title>
+    <title>Mini-Servidor J8</title>
     <link rel="icon" type="image/svg-xml"
         href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2224%22%20height=%2224%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20stroke=%22currentColor%22%20stroke-width=%221.5%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%20class=%22icon%20icon-tabler%20icons-tabler-outline%20icon-tabler-terminal-2%22%3E%3Cpath%20stroke=%22none%22%20d=%22M0%200h24v24H0z%22%20fill=%22none%22%20/%3E%3Cpath%20d=%22M8%209l3%203l-3%203%22%20/%3E%3Cpath%20d=%22M13%2015l3%200%22%20/%3E%3Cpath%20d=%22M3%206a2%202%200%200%201%202%20-2h14a2%202%200%200%201%202%202v12a2%202%200%200%201%20-2%202h-14a2%202%200%200%201%20-2%20-2l0%20-12%22%20/%3E%3C/svg%3E">
     <!-- Importação da fonte JetBrains Mono -->
@@ -49,12 +49,12 @@
     <nav
         class="fixed top-0 left-0 w-full bg-[#121212]/90 backdrop-blur-md border-b border-customBorder flex justify-between items-center py-4 px-8 z-50 text-sm">
         <div class="text-customSec truncate max-w-[60%] sm:max-w-none">
-            ~/arthur-faturini / laboratorio-maker / <span class="text-customMain">assistente-ia-local</span>
+            ~/arthur-faturini / projetos / <span class="text-customMain">mini-servidor</span>
         </div>
         <div>
-            <a href="laboratorio.html"
+            <a href="projetos.html"
                 class="text-customSec hover:text-customMain transition-colors flex items-center gap-1">
-                ← Voltar ao Laboratório
+                ← Voltar aos Projetos
             </a>
         </div>
     </nav>
@@ -64,26 +64,26 @@
 
         <!-- Hero do Experimento -->
         <header class="mb-20">
-            <h1 class="text-2xl md:text-3xl font-bold text-customMain mb-4">Assistente Virtual com IA Local</h1>
+            <h1 class="text-2xl md:text-3xl font-bold text-customMain mb-4">Mini-Servidor J8</h1>
             <p class="text-customSec text-base md:text-lg mb-8 text-justify">
-                Arquitetura conceitual de um assistente pessoal inteligente projetado para ser executado 100% offline em
-                hardware local. Elimina a dependência de APIs pagas em nuvem e o compartilhamento de dados com
-                terceiros, integrando modelos de linguagem locais (LLMs) ao controle de rotinas do sistema operacional.
+                Servidor de monitoramento e controle remoto hospedado em hardware reaproveitado (Samsung J8). Integrado
+                a um bot no Telegram em Python para comandos de controle remoto, gestão de
+                status do PC principal, Wake-on-LAN e acesso via SSH para manutenção emergencial.
             </p>
 
             <!-- Caixa de Metadados (Padrão de 3 colunas solicitado) -->
             <div class="border border-customBorder bg-customBg p-6 grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs">
                 <div>
                     <span class="text-customSec block mb-1">STATUS</span>
-                    <span class="text-customMain font-semibold">[Em Planejamento / Rascunho]</span>
+                    <span class="text-customMain font-semibold">Reavaliando projeto</span>
                 </div>
                 <div>
                     <span class="text-customSec block mb-1">CATEGORIA</span>
-                    <span class="text-customMain font-semibold">IA Local</span>
+                    <span class="text-customMain font-semibold">Reciclagem Tech / Home Lab</span>
                 </div>
                 <div>
-                    <span class="text-customSec block mb-1">STACK TEÓRICA</span>
-                    <span class="text-customMain font-semibold">Python, Ollama, HTML, CSS, JS</span>
+                    <span class="text-customSec block mb-1">TECNOLOGIAS</span>
+                    <span class="text-customMain font-semibold">Termux(Linux), Python, Tailscale</span>
                 </div>
             </div>
         </header>
@@ -100,12 +100,13 @@
                     <div class="w-full h-[1px] bg-customBorder mt-3"></div>
                 </div>
                 <p class="text-customSec text-sm md:text-base text-justify leading-relaxed">
-                    Assistentes virtuais convencionais e scripts de automação baseados em regras rígidas (if/else)
-                    falham em lidar com a naturalidade e a variação da linguagem humana, exigindo comandos sintéticos e
-                    decorados para executar tarefas simples. Além disso, soluções comerciais dependem de conexões com a
-                    nuvem, introduzindo latência de rede e riscos à privacidade de dados locais. A dor central é a
-                    ausência de uma interface inteligente, flexível e totalmente offline que consiga interpretar
-                    intenções em linguagem natural e traduzi-las em ações diretas no sistema operacional.
+                    Manter dependência exclusiva do PC principal para acesso remoto cria um ponto único de falha: se a
+                    máquina hibernar, travar ou perder conexão, todo o controle à distância é interrompido sem
+                    possibilidade de intervenção manual. Por outro lado, manter servidores em nuvem ou comprar hardware
+                    dedicado de infraestrutura gera custos desnecessários. A dor central é a ausência de um nó de apoio
+                    local, de baixíssimo consumo energético e alta disponibilidade, capaz de monitorar o ambiente,
+                    enviar comandos de recuperação (como Wake-on-LAN) e fornecer um canal de emergência via linha de
+                    comando (SSH) utilizando hardware reaproveitado.
                 </p>
             </section>
 
@@ -119,9 +120,10 @@
                     <div class="w-full h-[1px] bg-customBorder mt-3"></div>
                 </div>
                 <p class="text-customSec text-sm md:text-base text-justify leading-relaxed mb-6">
-                    Abaixo está a arquitetura preliminar de inferência e controle local. O fluxo foi projetado para
-                    operar totalmente desconectado da internet pública, garantindo zero vazamento de dados e respostas
-                    imediatas:
+                    Abaixo está a arquitetura infraestrutura local. O fluxo utiliza o
+                    dispositivo Android(J8) reaproveitado como nó centralizador de monitoramento e gateway de
+                    recuperação
+                    para a máquina principal:
                 </p>
 
                 <!-- Caixa Estilo Terminal com o Diagrama ASCII -->
@@ -129,20 +131,23 @@
                     class="my-6 bg-[#161616] border border-[#262626] rounded-md p-5 font-mono text-xs text-[#EDEDED] overflow-x-auto">
                     <div
                         class="text-[#888888] text-xs pb-3 mb-5 border-b border-[#262626] flex items-center justify-between">
-                        <span>~/arquitetura/assistente-ia-local</span>
-                        <span class="text-[#666666]">Fluxo de funcionamento Offline</span>
+                        <span>~/arquitetura/mini-servidor</span>
+                        <span class="text-[#666666]">Edge Gateway & WoL Pipeline</span>
                     </div>
 
                     <pre class="leading-relaxed">
-            # Topologia de Arquitetura Preliminar (ASCII Diagram):
+# Topologia de Arquitetura (ASCII Diagram):
 
-            [ Entrada de Voz / Texto ] ---> (Whisper STT Local) ---> [ Prompt Normalizado ]
-                                                                            |
-                                                                            v
-            [ Sistema Operacional (OS) ] <--- (Function Calling / JSON) <--- [ Modelo LLM Local ]
-                    |                                                       (ex: Llama / Ollama)
-                    +---> (Execução de Scripts / Automação CLI)
-                </pre>
+[ Usuário / Telegram App ] ---> (Comandos via Bot) ---> [ Servidor J8 / Termux (Python) ]
+                                                                   |
+                                          +------------------------+------------------------+
+                                          |                                                 |
+                                          v (Rede Local)                                    v (Acesso Direto)
+                              [ Pacote Magic / Wake-on-LAN ]                     [ Terminal SSH / Shell ]
+                                          |                                                 |
+                                          v                                                 v
+                              [ PC Principal (Bancada) ] <----------------------------------+
+    </pre>
                 </div>
             </section>
 
@@ -156,13 +161,17 @@
                     <div class="w-full h-[1px] bg-customBorder mt-3"></div>
                 </div>
                 <p class="text-customSec text-sm md:text-base text-justify leading-relaxed">
-                    Durante as primeiras explorações práticas, o uso do Ollama se mostrou surpreendentemente simples
-                    para rodar instâncias de LLMs locais. O desafio real da arquitetura está na integração dessa
-                    inteligência com o sistema operacional. Como próximos passos, o foco está em
-                    desenvolver o módulo de recepção de áudio em Python utilizando STT (Speech-to-Text),
-                    estruturar os schemas de JSON para garantir saídas padronizadas (Function Calling), e validar a
-                    execução de scripts de automação. Por fim, construir uma interface minimalista para
-                    acompanhamento das respostas em tempo real e personalização do uso da assistente virtual.
+                    A implementação prática proporcionou um aprendizado valioso em administração de sistemas Linux,
+                    gerencimento de conexões SSH e alocação eficiente de recursos em hardware restrito. O processo
+                    também refinou minha habilidade de engenharia de prompt e gestão de contexto ao utilizar IAs para
+                    auxiliar no desenvolvimento, visto que tive muito problema com elas durante a execução do
+                    projeto(muito!). Atualmente, o projeto encontra-se em fase de reavaliação de
+                    infraestrutura: embora o J8 tenha cumprido seu papel, suas limitações
+                    de processamento indicam a necessidade de um upgrade de hardware. A evolução do projeto poderia ser
+                    migrar para um Raspberry Pi, ponto baixo, porém bem estruturado, ou evoluir para um notebook
+                    reutilizado de médio porte e,
+                    como ponto alto, converter o reaproveitamento de componentes legados do meu próprio PC principal em
+                    um servidor dedicado de alta performance comparado aos outros modelos.
                 </p>
             </section>
 
